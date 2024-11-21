@@ -16,6 +16,14 @@ body {
     background-color: #fff;
 }
 
+/* Define a estrutura da página */
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ocupa a altura total da viewport */
+}
+
 /* Container principal */
 #container {
     max-width: 800px;
@@ -95,6 +103,7 @@ header h1 {
     width: 100%;
     display: -webkit-box;
     -webkit-line-clamp: 1;
+    line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -365,12 +374,62 @@ header h1 {
     color: #000;
 }
 
+/* O footer fica na parte inferior da página */
 .footer-style {
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 1rem;
     background-color: #f9f9f9;
     color: #444;
     border-top: 1px solid #e0e0e0;
+    text-align: center;
+    margin-top: auto;
+    /* Empurra o footer para o final */
+}
+
+/* Estilização do container principal */
+.delete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/* Título */
+.delete h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Estilização do formulário */
+.delete-form {
+    max-width: 400px;
+    background-color: #fefefe;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Texto de confirmação */
+.delete-form p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.delete-form strong {
+    color: #e63946;
+    font-weight: bold;
+}
+
+/* Ações do formulário */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }

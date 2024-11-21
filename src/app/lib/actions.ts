@@ -33,3 +33,12 @@ export async function UpdateEmpresa(id: number, formData: FormData) {
     revalidatePath('/');
     redirect('/');
 }
+
+export async function DeleteEmpresa(id: number) {
+    await prisma.empresa.delete({
+        where: { id: id },
+    });
+
+    revalidatePath('/');
+    redirect('/');
+}
