@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CreateForm from "@/app/UI/Empresa/create-from";
+import CreateForm from "@/app/UI/Empresa/create-form";
 
 export default function Page() {
   return (

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FindEmpresa } from "@/app/lib/querys";
-import UpdateForm from "@/app/UI/Empresa/update-from";
+import UpdateForm from "@/app/UI/Empresa/update-form";
 
 export default async function Page({ params }: { params: { id: string } }) {
 
